@@ -12,7 +12,7 @@ class Home extends Component {
           <p>
           </p>
           <p>  
-            Edit <code>src/App.js</code> and save to reload.
+            Edit <code>src/Home.js</code> and save to reload.
           </p>
           <a
             className="App-link"
