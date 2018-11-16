@@ -9,7 +9,6 @@ class Header extends Component {
           <div className="nav-wrapper">
             <a href="#!" className="brand-logo">Logo</a>
             <ul className="right hide-on-med-and-down">
-             <li> <Link to='/team'>Team8</Link></li>
              <li> <Link to='/login'>Logout</Link></li>
             </ul>
           </div>
