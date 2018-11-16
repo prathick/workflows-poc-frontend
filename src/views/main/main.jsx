@@ -10,9 +10,9 @@ class Main extends Component {
     return (
       <div className="Main">
       <Switch>
-            <Route exact path='/' component={Login}/>
-            <Route exact path='/team' component={Team}/>
-            <Route exact path='/home' component={Home}/>
+          <Route exact path='/' component={Login}/>
+          <Route exact path='/team' component={Team}/>
+          <Route exact path='/home' component={Home}/>
         </Switch>
       </div>
     );
