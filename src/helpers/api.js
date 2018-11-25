@@ -1,12 +1,12 @@
 import AppHelper from "helpers/AppHelper.js";
-import client from 'index.js';
+import axiosClient from 'index.js';
 
 class API {
 
   // POST requests
 
   registerUser (data) {
-    client.post("user/register", {
+    axiosClient.post("user/register", {
       firstName: data.firstName,
       lastName: data.lastName,
       emailId: data.emailId,
