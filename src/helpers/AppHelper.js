@@ -4,6 +4,7 @@ class AppHelper {
   loginUser = (loggedIn, accessToken) => {
     window.localStorage.setItem("loggedIn", loggedIn);
     window.localStorage.setItem("accessToken", accessToken);
+    history.push('/home') // Change this if you have to
   }
 
   logoutUser = () => {
