@@ -1,16 +1,12 @@
 import React, { Component } from 'react';
-import logo from 'images/deakin-logo.svg'
-import Header from 'components/header.jsx'
+import logo from 'images/deakin-logo.svg';
 
 class Home extends Component {
   render() {
     return (
       <div className="Home">
-         <Header />
-             <header className="App-header">
+        <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <p>
-          </p>
           <p>  
             Edit <code>src/Home.js</code> and save to reload.
           </p>
