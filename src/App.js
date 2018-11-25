@@ -42,7 +42,7 @@ class App extends Component {
     else return (
       <div className="App">
         {this.props.loggedIn ? <Header title={this.state.title} logout={this.stateHandler}/> : ''}
-        {this.props.loggedIn ? <Main  parentState={this.state} parentStateHandler={this.stateHandler}/> : <Login parentState={this.state} parentProps={this.props}/>}
+        {this.props.loggedIn ? <Main parentState={this.state} parentStateHandler={this.stateHandler}/> : <Login parentState={this.state} parentProps={this.props}/>}
         {this.props.loggedIn ? <Footer/> : ''}
       </div>
     );
@@ -52,7 +52,7 @@ class App extends Component {
 const mapStateToProps = (state) => {
   return {
       loggedIn : state.loginStatus.loggedIn,
-      loading : state.loginStatus.loading,
+      loading : state.loginStatus.loading
   }
 }
 
