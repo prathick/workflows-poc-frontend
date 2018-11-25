@@ -13,13 +13,13 @@ class Login extends Component {
     };
   }
 
-  handleEmailChange=(e)=> {
+  handleEmailChange = (e) => {
     this.setState({
       emailId: e.target.value
     });
   }
 
-  handlePasswordChange=(e)=> {
+  handlePasswordChange = (e) => {
     this.setState({
       password: e.target.value
     });
@@ -30,7 +30,6 @@ class Login extends Component {
       const accessToken = response.payload.data.data.accessToken;
       AppHelper.loginUser(true, accessToken);
     });
-    // API.loginUser(this.state,this.props.parentProps.parentStateHandler)
   }
 
   render() {
