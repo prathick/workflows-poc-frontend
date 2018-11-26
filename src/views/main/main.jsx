@@ -8,10 +8,10 @@ class Main extends Component {
   render() {
     return (
       <div className="Main">
-      <Switch>
-        <Route exact path='/team' component={Team}/>
-        <Route exact path='/home' component={Home}/>
-      </Switch>
+        <Switch>
+          <Route exact path='/team' component={Team}/>
+          <Route exact path='/home' component={Home}/>
+        </Switch>
       </div>
     );
   }
