@@ -2,13 +2,15 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Home from 'views/home/home.jsx'
 import Team from 'views/team/team.jsx'
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, Redirect } from 'react-router-dom'
+import AppHelper from 'helpers/AppHelper'
 
 class Main extends Component {
   render() {
     return (
       <div className="Main">
         <Switch>
+          <Route exact path='/' render={ (props) => ( AppHelper.isUserLocalStorageLoggedIn() ? <Redirect to='/home'/> : <div></div> )} />
           <Route exact path='/team' component={Team}/>
           <Route exact path='/home' component={Home}/>
         </Switch>
