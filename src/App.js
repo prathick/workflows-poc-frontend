@@ -42,9 +42,9 @@ class App extends Component {
     if (this.props.loading) return (<LoadingComponent/>);
     else return (
       <div className="App">
-        {this.props.loggedIn ? <Header title={this.state.title} logout={this.stateHandler}/> : ''}
-        {this.props.loggedIn ? <Main parentState={this.state} parentStateHandler={this.stateHandler} parentProps={this.props}/> : <Login parentState={this.state} parentProps={this.props}/>}
-        {this.props.loggedIn ? <Footer/> : ''}
+        {this.props.loggedIn || AppHelper.getUserLoggedIn() ? <Header title={this.state.title} logout={this.stateHandler}/> : ''}
+        {this.props.loggedIn || AppHelper.getUserLoggedIn() ? <Main parentState={this.state} parentStateHandler={this.stateHandler} parentProps={this.props}/> : <Login parentState={this.state} parentProps={this.props}/>}
+        {this.props.loggedIn || AppHelper.getUserLoggedIn() ? <Footer/> : ''}
       </div>
     );
   }
