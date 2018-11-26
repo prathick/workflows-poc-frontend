@@ -33,7 +33,7 @@ class AppHelper {
 
   getUserAccessToken = () => {
     let value = window.localStorage.getItem("accessToken");
-    return ( value !== 'false' && value !== 'null' ) ? value : "" ;
+    return ( value !== 'false' && value !== 'null' && value !== "" ) ? value : "" ;
   }
 
 }
