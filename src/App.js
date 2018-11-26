@@ -30,6 +30,7 @@ class App extends Component {
   componentDidMount() {
     let token = ''
     if ((token = AppHelper.isUserLocalStorageLoggedIn())) {
+      if (token === 'true') return;
       this.props.dispatchAccessTokenLogin(token)
       .then((response) => {
         console.log(response);
@@ -42,9 +43,9 @@ class App extends Component {
     if (this.props.loading) return (<LoadingComponent/>);
     else return (
       <div className="App">
-        {this.props.loggedIn || AppHelper.getUserLoggedIn() ? <Header title={this.state.title} logout={this.stateHandler}/> : ''}
-        {this.props.loggedIn || AppHelper.getUserLoggedIn() ? <Main parentState={this.state} parentStateHandler={this.stateHandler} parentProps={this.props}/> : <Login parentState={this.state} parentProps={this.props}/>}
-        {this.props.loggedIn || AppHelper.getUserLoggedIn() ? <Footer/> : ''}
+        {this.props.loggedIn || AppHelper.isUserLocalStorageLoggedIn() ? <Header title={this.state.title} logout={this.stateHandler}/> : ''}
+        {this.props.loggedIn || AppHelper.isUserLocalStorageLoggedIn() ? <Main parentState={this.state} parentStateHandler={this.stateHandler} parentProps={this.props}/> : <Login parentState={this.state} parentProps={this.props}/>}
+        {this.props.loggedIn || AppHelper.isUserLocalStorageLoggedIn() ? <Footer/> : ''}
       </div>
     );
   }

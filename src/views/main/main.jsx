@@ -10,7 +10,7 @@ class Main extends Component {
     return (
       <div className="Main">
         <Switch>
-          <Route exact path='/' render={ (props) => ( AppHelper.getUserLoggedIn() ? <Redirect to='/home'/> : <div></div> )} />
+          <Route exact path='/' render={ (props) => ( AppHelper.isUserLocalStorageLoggedIn() ? <Redirect to='/home'/> : <div></div> )} />
           <Route exact path='/team' component={Team}/>
           <Route exact path='/home' component={Home}/>
         </Switch>
