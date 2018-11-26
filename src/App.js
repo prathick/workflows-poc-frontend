@@ -8,6 +8,7 @@ import AppHelper from "helpers/AppHelper.js";
 import Footer from 'components/footer.jsx';
 import LoadingComponent from 'components/loading/loading.jsx';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import { requestAccessTokenLogin } from 'actions';
 import Login from 'views/login/login.jsx';
 
