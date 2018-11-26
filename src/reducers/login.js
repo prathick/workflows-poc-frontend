@@ -1,4 +1,4 @@
-import { REQUEST_LOGIN, REQUEST_LOGOUT, REQUEST_ACCESS_TOKEN_LOGIN } from "actions";
+import { REQUEST_LOGIN, REQUEST_LOGOUT, REQUEST_ACCESS_TOKEN_LOGIN, DEVELOPER_LOGIN } from "actions";
 const REQUEST_LOGIN_SUCCESS = "REQUEST_LOGIN_SUCCESS"
 const REQUEST_LOGIN_FAIL = "REQUEST_LOGIN_FAIL"
 
@@ -17,6 +17,7 @@ const login = (state = {loading: false, loggedIn: false, userRole: ''}, action) 
 
     case REQUEST_LOGIN_SUCCESS:
     case REQUEST_ACCESS_TOKEN_LOGIN_SUCCESS:
+    case DEVELOPER_LOGIN:
       return {...state, loading: false, loggedIn: true}
 
     case REQUEST_LOGIN_FAIL:

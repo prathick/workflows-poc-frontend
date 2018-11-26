@@ -1,6 +1,11 @@
 import { history } from 'helpers/router';
 
 class AppHelper {
+  developerModeLoginUser = (loggedIn) => {
+    window.localStorage.setItem("loggedIn", loggedIn);
+    history.push('/home') // Change this if you have to
+  }
+
   loginUser = (loggedIn, accessToken) => {
     window.localStorage.setItem("loggedIn", loggedIn);
     window.localStorage.setItem("accessToken", accessToken);

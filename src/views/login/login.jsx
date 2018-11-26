@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import AppHelper from "helpers/AppHelper.js";
 import { connect } from 'react-redux';
-import { requestLogin } from 'actions';
+import { requestLogin, developerModeLogin } from 'actions';
 
 class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
       emailId: '',
-      password: ''
+      password: '',
+      developerMode: true // Change this to false to contact API
     };
   }
 
@@ -25,6 +26,13 @@ class Login extends Component {
   }
 
   performLogin = () => {
+    if (this.state.developerMode) {
+      console.log('inside developerMode login');
+      this.props.dispatchDeveloperModeLogin();
+      AppHelper.developerModeLoginUser(true);
+      return;
+    }
+    console.log('outside developerMode login');
     this.props.dispatchLogin(this.state).then((response) => {
       const accessToken = response.payload.data.data.accessToken;
       AppHelper.loginUser(true, accessToken);
@@ -55,7 +63,8 @@ class Login extends Component {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    dispatchLogin  : (data) => dispatch(requestLogin(data))
+    dispatchLogin  : (data) => dispatch(requestLogin(data)),
+    dispatchDeveloperModeLogin : () => dispatch(developerModeLogin())
   }
 }
 
