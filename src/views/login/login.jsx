@@ -25,7 +25,8 @@ class Login extends Component {
     });
   }
 
-  performLogin = () => {
+  performLogin = (e) => {
+    e.preventDefault();
     if (this.state.developerMode) {
       console.log('inside developerMode login');
       this.props.dispatchDeveloperModeLogin();
