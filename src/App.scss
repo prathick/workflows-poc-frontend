@@ -1,3 +1,24 @@
+// SASS style guide
+// color
+$primary-color: #0C8573;
+$secondary-color: #fff;
+$complementary-color: #850c1e;
+
+// font
+$sans-serif: "Source Sans Pro", Helvetica, Verdana, sans-serif;
+$serif: Merriweather, Georgia, "Times New Roman", serif;
+$mono: "Source Code Pro", Courier, mono;
+
+// font weight
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-semibold: 500;
+$font-weight-bold: 700;
+
+nav, footer {
+  background-color: $primary-color !important; 
+}
+
 .App {
   text-align: center;
 }
@@ -8,7 +29,7 @@
 }
 
 .App-header {
-  background-color: #0C8573;
+  background-color: $secondary-color;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
