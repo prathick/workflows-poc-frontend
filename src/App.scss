@@ -21,6 +21,9 @@ nav, footer {
 
 .App {
   text-align: center;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 .App-logo {
@@ -50,4 +53,8 @@ nav, footer {
   to {
     transform: rotate(360deg);
   }
+}
+
+main {
+  flex: 1 0 auto;
 }
