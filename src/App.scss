@@ -15,12 +15,17 @@ $font-weight-normal: 400;
 $font-weight-semibold: 500;
 $font-weight-bold: 700;
 
+// End of SASS variables
+
 nav, footer {
   background-color: $primary-color !important; 
 }
 
 .App {
   text-align: center;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 .App-logo {
@@ -50,4 +55,8 @@ nav, footer {
   to {
     transform: rotate(360deg);
   }
+}
+
+main {
+  flex: 1 0 auto;
 }
