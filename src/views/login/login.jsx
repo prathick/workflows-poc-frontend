@@ -87,9 +87,13 @@ class Login extends Component {
               <input placeholder="Email" id="email" type="email" className="validate" onChange={this.handleEmailChange} />
               <input placeholder="Password" id="password" type="password" className="validate" onChange={this.handlePasswordChange} />
               {this.errorMessage()}
-              { this.props.loginLoading ? "Loading..." : <a className="waves-effect waves-light btn" id="loginButton" onClick={this.performLogin} href="#!">
-                <i className="material-icons left">cloud</i>Login
-                </a> }
+              {
+                this.props.loginLoading ? 
+                  "Loading..." : 
+                  <a className="waves-effect waves-light btn" id="loginButton" onClick={this.performLogin} href="#!">
+                    <i className="material-icons left">cloud</i>Login
+                  </a>
+              }
             </div>
           </div>
         </div>
