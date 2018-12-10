@@ -9,7 +9,7 @@ class Login extends Component {
     this.state = {
       emailId: '',
       password: '',
-      developerMode: false, // Change this to false to contact API
+      developerMode: true, // Change this to false to contact API
       error: false,
       errorMsg: ''
     };
