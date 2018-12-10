@@ -36,8 +36,6 @@ class AppHelper {
     if ((this.getUserLoggedIn() && ((token = this.getUserAccessToken()) !== "")) ||
         (this.getUserLoggedIn() && (this.getDeveloperMode()))) {
       token = "" + ( (this.getUserAccessToken()) || this.getDeveloperMode() ); // this is wrong!
-      console.log('isUserLocalStorageLoggedIn: ', token);
-      console.log('this.getDeveloperMode():', this.getDeveloperMode());
       return token;
     }
     else
@@ -46,17 +44,17 @@ class AppHelper {
 
   getUserLoggedIn = () => {
     let value = window.localStorage.getItem("loggedIn");
-    return ( value !== 'false' && value !== 'null' );
+    return ( value !== 'false' && value !== null );
   }
 
   getUserAccessToken = () => {
     let value = window.localStorage.getItem("accessToken");
-    return ( value !== 'false' && value !== 'null' && value !== "" ) ? value : "" ;
+    return ( value !== 'false' && value !== null && value !== "" ) ? value : "" ;
   }
 
   getDeveloperMode = () => {
     let value = window.localStorage.getItem("developerMode");
-    return ( value !== 'false' && value !== 'null' );
+    return ( value !== 'false' && value !== null );
   }
 
 }
