@@ -1,7 +1,7 @@
 
 A boilerplate for react frontend projects.
 
-> Git Repo: https://github.com/deakin-launchpad/deakin-react-cloud
+> Git Repo: https://github.com/deakin-launchpad/deakin-frontend-boilerplate.git
 
 ## Table of Contents
 
@@ -27,7 +27,7 @@ Before setting up, [Install](https://nodejs.org/en/download/) nodeJS or run belo
 
 ### Clone repository
 
-    git clone https://github.com/deakin-launchpad/deakin-react-cloud.git
+    git clone https://github.com/deakin-launchpad/deakin-frontend-boilerplate.git
 
 and then change directory,
 
