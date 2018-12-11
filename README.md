@@ -31,7 +31,7 @@ Before setting up, [Install](https://nodejs.org/en/download/) nodeJS or run belo
 
 and then change directory,
 
-    cd ./deakin-react-cloud
+    cd ./deakin-frontend-boilerplate
 
 ## Available scripts
 
