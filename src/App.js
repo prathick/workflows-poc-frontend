@@ -12,6 +12,7 @@ import { requestAccessTokenLogin } from 'actions';
 import Login from 'views/login/login.jsx';
 import Home from 'views/home/home.jsx';
 import Team from 'views/team/team.jsx';
+import Example from 'views/Example';
 
 class App extends Component {
   constructor(props) {
@@ -62,7 +63,8 @@ class App extends Component {
             <Home {...props}/> : <Redirect to='/' /> )} 
           />
 
-          <Route exact path='/test' render={() => <div>Test</div>} />
+          <Route exact path='/test' render={(props) => (this.props.loggedIn || AppHelper.isUserLocalStorageLoggedIn() ? 
+            <Example {...props}/> : <Redirect to='/' /> )} />
 
           <Route render={() => <div>404 Error</div>} />
 
