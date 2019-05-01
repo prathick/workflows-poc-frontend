@@ -1,41 +1,39 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import TextRender from 'views/TextRender';
+import InputRender from './InputRender';
+
 
 class Example extends Component {
+  // state = {
+  //   value: TextRender
+  // }
   state =
     {
       data: [
         {
-          "component": "TextRender",
+          "component": TextRender,
           "props": {
             "value": "Enter your name:",
             "class": "class1"
-          }
+          },
+          "children": [
+            {
+              "component": InputRender,
+              "props": {
+                "type": "text",
+                "name": "fname"
+              }
+            },
+            {
+              "component": InputRender,
+              "props": {
+                "type": "submit",
+                "value": "Submit"
+              }
+            }
+          ]
         },
-        // {
-        //   "component": "FormRender",
-        //   "props": {
-        //     "method": "get",
-        //     "action": "/getName"
-        //   },
-        //   "children": [
-        //     {
-        //       "component": "InputRender",
-        //       "props": {
-        //         "type": "text",
-        //         "name": "fname"
-        //       }
-        //     },
-        //     {
-        //       "component": "InputRender",
-        //       "props": {
-        //         "type": "submit",
-        //         "value": "Submit"
-        //       }
-        //     }
-        //   ]
-        // }
       ]
     }
 
@@ -46,10 +44,13 @@ class Example extends Component {
   //   })
   // }
   render() {
-    return this.state.data.map(i => {
-      let MyItem = i.component
-      return <MyItem data={i.props}/>
-    })
+  
+   
+    return (
+      this.state.data.map(i => {
+        let MyItem = i.component
+        return <MyItem  content={i.props} children={i.children}/>
+      }))
   }
 }
 
