@@ -1,24 +1,14 @@
-import React, { Component } from 'react';
-import logo from 'images/deakin-logo.svg';
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 class Home extends Component {
+  onClick = () => {
+
+  }
   render() {
     return (
       <div className="Home">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>  
-            Edit <code>src/Home.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Link to={{pathname: "/wf", state: {flow: 'wf-track_mood'}}}>Track your mood</Link>
       </div>
     );
   }
